@@ -1,0 +1,4 @@
+interface:
+  display_name: "Start Here"
+  short_description: "Setup interview that writes your AGENTS.md"
+  default_prompt: "Use $start-here to get to know my app and how I like to work."

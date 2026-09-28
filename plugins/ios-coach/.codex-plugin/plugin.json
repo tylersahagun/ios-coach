@@ -1,0 +1,37 @@
+{
+  "name": "ios-coach",
+  "version": "0.1.0",
+  "description": "A patient coach for building an iOS app with Codex: interviews you about your app and how you work, writes your AGENTS.md, checks the build, reviews changes, and teaches as it goes.",
+  "author": {
+    "name": "Tyler Sahagun",
+    "url": "https://github.com/tylersahagun"
+  },
+  "keywords": [
+    "ios",
+    "swift",
+    "swiftui",
+    "xcode",
+    "beginner",
+    "teaching",
+    "flashcards"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "iOS Coach",
+    "shortDescription": "Setup interview, build checks, and plain-English teaching for your iOS app",
+    "longDescription": "iOS Coach gets to know your app and how you like to work through a short one-question-at-a-time interview, then writes an AGENTS.md so every Codex session starts with that context. It also checks that the app still builds, reviews changes for common beginner pitfalls before you call them done, and explains anything in plain English with an optional quick quiz.",
+    "developerName": "Tyler Sahagun",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Set up iOS Coach for my app.",
+      "Check that my app still builds.",
+      "Explain what you just changed."
+    ],
+    "brandColor": "#D93A3A"
+  }
+}

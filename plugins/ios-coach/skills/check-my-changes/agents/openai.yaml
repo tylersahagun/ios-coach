@@ -1,0 +1,4 @@
+interface:
+  display_name: "Check My Changes"
+  short_description: "Review changes before calling them done"
+  default_prompt: "Use $check-my-changes to review what changed before I call it done."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Teach Me"
+  short_description: "Explain anything in my own code, then quiz me"
+  default_prompt: "Use $teach-me to explain what you just changed."

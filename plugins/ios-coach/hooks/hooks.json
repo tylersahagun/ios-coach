@@ -1,0 +1,17 @@
+{
+  "description": "Offer the iOS Coach setup interview in iOS projects that have not been set up yet.",
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$PLUGIN_ROOT/hooks/session-start.sh\"",
+            "timeout": 10,
+            "statusMessage": "Checking iOS Coach setup"
+          }
+        ]
+      }
+    ]
+  }
+}

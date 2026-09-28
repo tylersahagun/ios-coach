@@ -1,0 +1,20 @@
+{
+  "name": "sahagun",
+  "interface": {
+    "displayName": "Sahagun Family"
+  },
+  "plugins": [
+    {
+      "name": "ios-coach",
+      "source": {
+        "source": "local",
+        "path": "./plugins/ios-coach"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    }
+  ]
+}

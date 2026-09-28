@@ -1,0 +1,4 @@
+interface:
+  display_name: "Verify"
+  short_description: "Does it still build? Plain-English results"
+  default_prompt: "Use $verify to check that my app still builds and its tests pass."
