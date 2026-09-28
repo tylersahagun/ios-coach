@@ -5,35 +5,26 @@ writes that down so every Codex session starts with it, checks that the app stil
 changes before you call them done, and explains things in plain English with a quick quiz if you
 want one.
 
-## Install (one time, about 5 minutes)
+## Install
 
-1. Open **Terminal** and paste:
+Paste this into Codex:
 
-   ```bash
-   codex plugin marketplace add tylersahagun/ios-coach
-   ```
+```text
+Install the Codex plugin at https://github.com/tylersahagun/ios-coach for me. It's a plugin marketplace, not individual skills. Follow the INSTALL.md in that repo.
+```
 
-   If Terminal says `command not found: codex`, use the copy of Codex inside the ChatGPT app:
+Codex will ask you to approve a few commands. Say yes: they add iOS Coach to Codex and nothing
+else. When it's done:
 
-   ```bash
-   /Applications/ChatGPT.app/Contents/Resources/codex plugin marketplace add tylersahagun/ios-coach
-   ```
-
-2. Install the plugin. Either run `codex plugin add ios-coach@sahagun`, or in Codex open
-   **Plugins**, choose **Sahagun Family**, and install **iOS Coach**.
-
-3. While you're in Plugins, also install **Build iOS Apps** (from OpenAI). It lets Codex build,
-   run, and take screenshots of your app in the simulator.
-
-4. Start a **new** Codex chat with your app's folder open. The first time, Codex asks you to
-   review iOS Coach's startup check (you can also type `/hooks`). Approve it. All it does is look
-   for an AGENTS.md file to see whether setup has been done.
-
-5. Say: **"Set up iOS Coach for my app."**
+1. Start a **new** chat with your app's folder open.
+2. The first time, Codex asks you to review iOS Coach's startup check (you can also type
+   `/hooks`). Approve it. All it does is look for an AGENTS.md file to see whether setup has been
+   done.
+3. Say: **"Set up iOS Coach for my app."**
 
    It looks at your project, then asks about a dozen questions, one at a time. "Not sure" is
-   always a fine answer. At the end it writes an `AGENTS.md` file into your project and gives you a
-   short summary you can text to Tyler if you'd like.
+   always a fine answer. At the end it writes an `AGENTS.md` file into your project and gives you
+   a short summary you can text to Tyler if you'd like.
 
 ## What you can ask for
 
@@ -48,20 +39,28 @@ You can also type `$` in Codex and pick an iOS Coach skill from the list.
 
 ## Getting updates
 
-When Tyler says there's a new version:
+When Tyler says there's a new version, paste the same message into Codex again. The install steps
+also update. Then start a new chat.
+
+## Manual install (if the paste doesn't work)
+
+In **Terminal**:
 
 ```bash
-codex plugin marketplace upgrade sahagun
+codex plugin marketplace add tylersahagun/ios-coach
 codex plugin add ios-coach@sahagun
 ```
 
-Then start a new chat.
+If Terminal says `command not found: codex`, put
+`/Applications/ChatGPT.app/Contents/Resources/codex` in place of `codex` in both lines. Then, in
+Codex's **Plugins** page, also install **Build iOS Apps** from OpenAI, and follow steps 1–3 above.
 
 ---
 
 ## Maintaining (Tyler)
 
 ```
+INSTALL.md                           # steps Codex follows when he pastes the install prompt
 .agents/plugins/marketplace.json     # makes this repo a marketplace named "sahagun"
 plugins/ios-coach/
   .codex-plugin/plugin.json          # manifest; bump "version" for each release
@@ -97,7 +96,8 @@ bash plugins/ios-coach/skills/start-here/scripts/detect_project.sh
 bash plugins/ios-coach/skills/verify/scripts/verify.sh --test
 ```
 
-**Release:** bump `version` in `plugin.json`, push, and tell him to run the two update commands.
+**Release:** bump `version` in `plugin.json`, push, and tell him to paste the install prompt again
+(INSTALL.md's commands are all safe to re-run, so install and update are the same steps).
 
 **Add later, when he actually needs them:**
 - `ship-to-testflight`: your Folio ship lessons (upload with stable Xcode, never a beta; unique
